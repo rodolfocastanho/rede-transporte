@@ -19,7 +19,7 @@ public class AtpController {
 
     @RequestMapping(value = "/novo", method = RequestMethod.POST)
     public Atp Save(@RequestBody Atp atp){
-        return atpService.SaveAtp(atp);
+        return atpService.Save(atp);
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)

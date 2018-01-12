@@ -1,5 +1,6 @@
 package br.com.rodolfocastanho.redetransporte.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
 
 import javax.persistence.*;
@@ -60,6 +61,7 @@ public class Usuario {
         this.nome = nome;
     }
 
+    /*
     public String getSenha() {
         return senha;
     }
@@ -67,6 +69,7 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    */
 
     public String getEmail() {
         return email;

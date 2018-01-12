@@ -17,7 +17,7 @@ public class AtpService {
         return atpRepository.findAll();
     }
 
-    public Atp SaveAtp(Atp atp){
+    public Atp Save(Atp atp){
         return atpRepository.save(atp);
     }
 
