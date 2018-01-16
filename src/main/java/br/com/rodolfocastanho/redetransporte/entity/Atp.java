@@ -4,6 +4,7 @@ package br.com.rodolfocastanho.redetransporte.entity;
 import br.com.rodolfocastanho.redetransporte.entity.historic.AtpPrazo;
 import br.com.rodolfocastanho.redetransporte.entity.historic.AtpStatus;
 import br.com.rodolfocastanho.redetransporte.entity.support.StatusAtp;
+import br.com.rodolfocastanho.redetransporte.entity.support.StatusPrioridade;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -55,6 +56,10 @@ public class Atp {
 
     @Column
     private Calendar conclusaoTarefa;
+
+    @OneToOne
+    @JoinColumn
+    private StatusPrioridade statusPrioridade;
 
     @OneToMany(mappedBy = "atp")
     private List<Ga> gas = new ArrayList<>();
